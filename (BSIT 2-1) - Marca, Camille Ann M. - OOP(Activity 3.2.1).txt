@@ -1,0 +1,48 @@
+package act;
+
+import javax.swing.JOptionPane;
+
+public class grading {
+	
+	public static void main(String[] args)
+	{
+		int ans;
+		
+		System.out.println("=======================================");
+		System.out.println("Activity 3.2");
+		System.out.println("Program by: Camille Ann M. Marca");
+		System.out.println("BSIT 2-1");
+		System.out.println("=======================================\n");
+		
+		ans = Integer.parseInt(JOptionPane.showInputDialog("Type [0] for Undergraduate & [1] for Masteral: "));
+		
+		if (ans == 0)
+		{
+			double quiz = Double.parseDouble(JOptionPane.showInputDialog("Enter Quiz Grade (25%): "));
+			double act = Double.parseDouble(JOptionPane.showInputDialog("Enter Activity Grade (15%): "));
+			double recit = Double.parseDouble(JOptionPane.showInputDialog("Enter Recitation Grade (20%): "));
+			double me = Double.parseDouble(JOptionPane.showInputDialog("Enter Midterm Exam Grade (40%): "));
+			
+			grade calcu = new grade (quiz, act, recit, me);
+			
+			calcu.display1();
+		}
+		else if (ans == 1)
+		{
+			double quiz = Double.parseDouble(JOptionPane.showInputDialog("Enter Quiz Grade (25%): "));
+			double act = Double.parseDouble(JOptionPane.showInputDialog("Enter Activity Grade (15%): "));
+			double recit = Double.parseDouble(JOptionPane.showInputDialog("Enter Recitation Grade (20%): "));
+			double me = Double.parseDouble(JOptionPane.showInputDialog("Enter Midterm Exam Grade (40%): "));
+			
+			grade calcu = new grade (quiz, act, recit, me);
+			
+			calcu.display2();
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "INVALID", "ERROR", JOptionPane.ERROR_MESSAGE);
+		}
+		
+		
+	}
+}
