@@ -1,0 +1,122 @@
+package act;
+
+import javax.swing.JOptionPane;
+
+public class grade {
+		
+		double quizz;
+		double activity;
+		double recitation;
+		double midterm;
+		
+		grade (double q, double a, double r, double m)
+		{
+			quizz = q;
+			activity = a;
+			recitation = r;
+			midterm = m;
+		}
+		
+		double midGrade (double qz, double ac, double rt, double mt)
+		{
+			return (qz*.25) + (ac*.15) + (rt*.20) + (mt*.40);
+		}
+		
+		void display1 ()
+		{
+			double mg;
+			
+			mg = midGrade (quizz, activity, recitation, midterm);
+			
+	        if ((mg <= 100) && (mg >= 97))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.00" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 96) && (mg >= 94))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.25" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 93) && (mg >= 91))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.50" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 90) && (mg >= 88))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.75" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 87) && (mg >= 85))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.00" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 84) && (mg >= 82))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.25" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 81) && (mg >= 79))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.50" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 78) && (mg >= 76))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.75" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if (mg >= 75)
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 3.00" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 5.00" + "\n" + "Remarks: Failed",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+		}
+		
+		void display2 ()
+		{
+			double mg = 0;
+			
+			mg = midGrade (quizz, activity, recitation, midterm);
+			
+	        if ((mg <= 100) && (mg >= 97))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.00" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 96) && (mg >= 94))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.25" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 93) && (mg >= 91))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.50" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 90) && (mg >= 88))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 1.75" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 87) && (mg >= 85))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.00" + "\n" + "Remarks: Pass",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 84) && (mg >= 82))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.25" + "\n" + "Remarks: Failed",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 81) && (mg >= 79))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.50" + "\n" + "Remarks: Failed",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if ((mg <= 78) && (mg >= 76))
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 2.75" + "\n" + "Remarks: Failed",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if (mg >= 75)
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 3.00" + "\n" + "Remarks: Failed",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else
+	        {
+	        	JOptionPane.showMessageDialog(null, "Midterm grade: " + mg + "\n" + "Equivalent: 5.00" + "\n" + "Remarks: Failed",  "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	        }
+		}
+
+	}
+
